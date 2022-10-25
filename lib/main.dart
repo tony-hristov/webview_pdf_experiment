@@ -36,7 +36,7 @@ class _WebViewAppState extends State<WebViewApp> {
         ],
       ),
       body: WebViewStack(
-        initialUrl: 'https://codelabs.developers.google.com/codelabs/flutter-webview#0',
+        initialUrl: 'https://flutter.dev',
         controller: controller,
       ),
     );

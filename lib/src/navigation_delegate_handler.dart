@@ -15,8 +15,8 @@ class NavigationDelegateHandler {
       log('Pdf: check if pdf at url=${navigationRequest.url}');
 
       try {
-        await fetchPdfFromUrl(navigationRequest.url);
-        log('Pdf: detected pdf at url=${navigationRequest.url}');
+        final pdfBytes = await fetchPdfFromUrl(navigationRequest.url);
+        log('Pdf: detected pdf at url=${navigationRequest.url} / ${pdfBytes.lengthInBytes} bytes!');
       } catch (error) {
         return NavigationDecision.navigate;
       }
